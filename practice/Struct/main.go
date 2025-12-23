@@ -15,37 +15,26 @@ type person struct {
 
 func main() {
 
-	//alex := person{"Alex", "Andreson"}
-
-	//var alex person
-
-	//alex.firstName = "alex"
-	//alex.lastName = "andreson"
-	//alex.contact.email = "alex.andreson@gmail.com"
-	//alex.contact.zipCode = 12345
-
-	//fmt.Println(alex)
-	//fmt.Printf("%+v", alex)
-
-	lionel := person{
-		firstName: "lionel",
-		lastName:  "Messi",
-		contact: contactInfo{
-			email:   "lionel.Messi@gmail.com",
-			zipCode: 12345,
+	alex := person {
+		firstName : "travis",
+		lastName : "head",
+		contact:  contactInfo {
+			  email: "travis@gmail.com",
+			  zipCode: 1234,
 		},
-	}
-	//leoPointer := &lionel
-	lionel.updateFirstName("leo")
-	lionel.print()
 
+	}
+
+	
+	alex.updateFirstName()
+	alex.print()
 }
 
 func (p person) print() {
-	fmt.Printf("%+v", p)
+	fmt.Printf("%+v",p)
 }
 
-func (pointerToPerson *person) updateFirstName(newFirstName string) {
-	(*pointerToPerson).firstName = newFirstName
-
+func (pointerToPerson *person) updateFirstName() {
+	(*pointerToPerson).firstName = "Pat"
 }
+	
